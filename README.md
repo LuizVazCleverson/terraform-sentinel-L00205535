@@ -43,13 +43,13 @@ Version constraints and the dependency lockfile reduce drift but do not guarante
 
 ## Evidence checklist
 
-* \[ ] `terraform init`, `validate`, compliant and noncompliant plan output saved
-* \[ ] Sentinel PASS screenshot with run identifier
-* \[ ] Sentinel FAIL screenshot with blocked run identifier
-* \[ ] Policy set association screenshot
-* \[ ] Technical report and AI disclosure completed
+- [x] Terraform init, fmt and validate completed
+- [x] Compliant Terraform plan saved
+- [x] Sentinel PASS: all five policies approved
+- [x] Sentinel FAIL: hard-mandatory sovereignty policy blocked the plan
+- [x] Technical report and AI disclosure completed
 
 ## AI disclosure
 
-AI assistance: OpenAI ChatGPT, GPT-6, 16 November 2026. Prompt: “Prepare the initial Terraform Sentinel assignment project for Windows PowerShell and guide step by step, prioritizing real execution evidence and submission within three hours.” AI helped draft starter Terraform/Sentinel policies, documentation and testing commands. Student must personally execute, inspect, correct and explain all results. Add further prompts used and changes made.
+OpenAI ChatGPT was used to support initial project scaffolding, troubleshooting, interpretation of Terraform and Sentinel errors, configuration review, and technical documentation. The student executed and verified the Terraform validation, Sentinel policy tests, and GitHub publication, and retains responsibility for the final submission.
 
