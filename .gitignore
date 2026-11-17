@@ -1,0 +1,16 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfplan
+terraform/tfplan
+terraform/tfplan-noncompliant
+*.tfvars.json
+*.tfvars
+*.tfvars.json
+.env
+.env.*
+*credentials*
+*.pem
+*.key
+.terraform.lock.hcl.bak

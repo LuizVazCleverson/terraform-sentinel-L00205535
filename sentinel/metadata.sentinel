@@ -1,0 +1,3 @@
+import "tfplan/v2" as plan
+instances = filter plan.resource_changes as _, r { r.type is "aws_instance" and r.mode is "managed" and not (r.change.actions contains "delete") }
+main = rule { all instances as _, r { all r.change.after.metadata_options as m { m.http_tokens is "required" } } }

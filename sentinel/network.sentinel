@@ -1,0 +1,19 @@
+import "tfplan/v2" as plan
+
+groups = filter plan.resource_changes as _, r {
+    r.type is "aws_security_group" and
+    r.mode is "managed" and
+    not (r.change.actions contains "delete")
+}
+
+main = rule {
+    all groups as _, group {
+        all group.change.after.ingress as ingress {
+            not (
+                ingress.from_port <= 22 and
+                ingress.to_port >= 22 and
+                ingress.cidr_blocks contains "0.0.0.0/0"
+            )
+        }
+    }
+}
